@@ -1,2 +1,2 @@
 # Database-Command-AND-query
-ALL SQL QUERY
+ALL MySQL QUERY
