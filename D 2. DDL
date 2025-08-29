@@ -1,0 +1,19 @@
+
+
+DDL command 
+ 
+1) create 
+--> create table student( id int primary key,name varchar(50), age int);
+
+
+2) alter
+--> alter table student add email varchar(20);
+
+3) drop (delete database object(permenent))
+--> drop table student;
+
+4) truncate (remove all rows)
+--> truncate tablet student;
+
+5) rename 
+--> rename table student to learners;
