@@ -1,0 +1,29 @@
+
+
+--Create Students table
+
+CREATE TABLE Students ( StudentID INT PRIMARY KEY,Name VARCHAR(50));
+
+-- Create Marks table
+CREATE TABLE Marks (StudentID INT,
+Marks INT);
+
+
+-- Insert data into Students
+INSERT INTO Students (StudentID, Name) VALUES
+(1, 'Amit'),
+(2, 'Rahul'),
+(3, 'Priya');
+
+-- Insert data into Marks
+INSERT INTO Marks (StudentID, Marks) VALUES
+(1, 85),
+(2, 90),
+(4, 70);
+
+SELECT Students.Name, Marks.Marks
+FROM Students
+INNER JOIN Marks
+ON Students.StudentID = Marks.StudentID;
+
+✅ Result: Only matching rows
