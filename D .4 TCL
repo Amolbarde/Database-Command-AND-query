@@ -1,0 +1,56 @@
+
+
+TCL ( transaction control language)
+- use to manage transaction in database 
+
+first start transaction
+--> start transaction 
+
+1) commit(when Execute update query and write commit then the changes is  permenently save in database)
+
+--> delete from emp where id=1;
+--> commit 
+
+2) rollback( when Execute update query and write rollback then the changes is  not save in database)
+
+--> update emp set id=2 where id=3;
+--> rollback;
+(then the emp not update)
+
+3)savepoint(A SAVEPOINT is a point within a transaction to which you can later roll back, without rolling back the entire transaction.)
+
+-->CREATE TABLE Bank (
+    AccNo INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Balance DECIMAL(10,2)
+);
+
+Start a transaction
+--> START TRANSACTION
+
+
+🧿Step 1: Insert record
+
+--> INSERT INTO Bank VALUES (1, 'Akshay', 5000)
+
+🧿Step 2: Set a savepoint
+--> SAVEPOINT step1;
+
+🧿Step 3: Insert another
+--> INSERT INTO Bank VALUES (2, 'Rahul', 7000);
+
+🧿Step 4: Set another savepoint
+--> SAVEPOINT step2;
+
+🧿Step 5: Insert wrong data
+-->INSERT INTO Bank VALUES (3, 'Amit', -2000); -- wrong balance
+
+step 5 is wrong ❌.
+So, rollback only to step2, not the entire transaction:
+
+--> ROLLBACK TO step2;
+
+👉 This removes Amit’s record, but keeps Akshay & Rahul’s records.
+
+🧿Step 6: finnally commit 
+-->commit;
