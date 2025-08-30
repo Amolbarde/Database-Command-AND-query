@@ -1,0 +1,45 @@
+
+
+🧿LIKE (%,_)
+--> LIKE oprator use to match pattern 
+--> mostly use with WHERE clause
+
+🧿use two wildcard 
+
+1) % percentage 
+(zero, one , multiple character)
+2) _ underscore
+( only single character)
+
+👉 Example 
+syntax-->SELECT column_name
+   FROM table_name
+   WHERE column_name LIKE pattern;
+
+CREATE TABLE Student (
+    id INT,
+    name VARCHAR(50)
+);
+
+INSERT INTO Student VALUES 
+(1, 'Akshay'),
+(2, 'Amit'),
+(3, 'Anil'),
+(4, 'Rahul'),
+(5, 'Rani');
+
+-->SELECT * FROM Student
+WHERE name LIKE 'A%';
+op->(Akshay,Amit)
+
+-->SELECT * FROM Student
+WHERE name LIKE '%ni%';
+op->(Anil , Rani)
+
+-->SELECT * FROM Student
+WHERE name LIKE '_a%';
+op->(Rahul, Rani)
+
+-->SELECT * FROM Student
+WHERE name LIKE '____';
+->op(All 4 character name)
