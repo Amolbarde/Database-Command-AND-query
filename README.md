@@ -1,2 +1,3 @@
 # Database-Command-AND-query
-ALL MySQL QUERY
+Important Query and command
+
