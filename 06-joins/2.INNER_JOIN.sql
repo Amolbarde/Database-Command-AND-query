@@ -26,4 +26,4 @@ FROM Students
 INNER JOIN Marks
 ON Students.StudentID = Marks.StudentID;
 
-✅ Result: Only matching rows
+
