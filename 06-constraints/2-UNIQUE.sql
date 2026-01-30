@@ -5,16 +5,18 @@
 
 
 
-college=# insert into department values('amolb4055@gmail.com');
---INSERT 0 1
-college=# insert into department values('amolb4055@gmail.com');
+--college=# 
+insert into department values('amolb4055@gmail.com');
+INSERT 0 1
+
+insert into department values('amolb4055@gmail.com');
 --ERROR:  duplicate key value violates unique constraint "department_email_key"
 --DETAIL:  Key (email)=(amolb4055@gmail.com) already exists.
 
-college=#                         
+--college=#                         
 select * from department;
-        email        
+--        email        
 ---------------------
- amolb4055@gmail.com
+-- amolb4055@gmail.com
 (1 row)
 
