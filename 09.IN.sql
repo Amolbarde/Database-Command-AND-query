@@ -1,0 +1,27 @@
+
+
+🧿IN( check if value is exists in list)
+
+syntax 
+--> SELECT column_name
+    FROM table_name
+    WHERE column_name IN (value1,                        
+value2, value3, ...);
+
+👉 Example 
+-->CREATE TABLE Student (
+    id INT,
+    name VARCHAR(50),
+    city VARCHAR(50)
+);
+
+-->INSERT INTO Student VALUES
+(1, 'Akshay', 'Pune'),
+(2, 'Amit', 'Mumbai'),
+(3, 'Anil', 'Delhi'),
+(4, 'Rahul', 'Pune'),
+(5, 'Rani', 'Nagpur');
+
+-->SELECT * FROM Student
+   WHERE city IN ('Pune', 'Delhi');
+->op(Akshay (Pune), Rahul (Pune),     Anil (Delhi))
